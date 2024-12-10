@@ -173,9 +173,9 @@ class Bop(Boid):
 
         return Vector(0, 0)
 
-def evolve_bops(bops, num_new_bops, mutation_rate=0.1):
+def evolve_bops(bops, num_new_bops, mutation_rate = 0.1, top = 50):
     bops.sort(key=lambda bop: bop.kill_count, reverse=True)
-    top_bops = bops[:50] 
+    top_bops = bops[:top] 
     
     new_bops = []
     
